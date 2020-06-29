@@ -1,9 +1,9 @@
 package handlers
 
 import (
-	"Practice/Exercise1/parser"
-	"Practice/Exercise1/rendoring"
 	"fmt"
+	"github.com/rohsa/strip-html-go/parser"
+	"github.com/rohsa/strip-html-go/rendoring"
 	"io/ioutil"
 	"net/http"
 	"path/filepath"

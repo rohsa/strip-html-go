@@ -7,7 +7,7 @@
 package main
 
 import (
-	"Practice/Exercise1/handlers"
+	"github.com/rohsa/strip-html-go/handlers"
 	"log"
 	"net/http"
 )
