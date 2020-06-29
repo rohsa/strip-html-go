@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Web Crawler</title>
+</head>
+
+<style>
+    .url-block {
+        display: flex;
+    }
+    .url-field {
+        padding-left: 10px;
+        width: 600px;
+        height: 40px;
+        border: 0;
+        outline: 0;
+        border-bottom: 2px solid;
+        border-bottom-color: lightgray;
+        font-size: 16px;
+    }
+    .submit-button {
+        background: lightskyblue;
+        width: 100px;
+        height: 40px;
+        border-style: none;
+        margin-left: 20px;
+        font-size: 16px;
+    }
+    .crawl-notifier {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        font-style: italic;
+        font-size: 16px;
+    }
+    .word-container {
+        padding-top: 20px;
+        display: grid;
+        width: 100px;
+        grid-template-columns: auto auto auto auto auto auto auto auto;
+    }
+    .word-list {
+        padding: 10px;
+        width: auto;
+        height: 10px;
+        border-style: groove;
+    }
+</style>
+
+<body>
+    <div>
+        <h1>Web Crawler</h1>
+    </div>
+
+    <form action="/submit/{{.Url}}" method="GET">
+        <div class="url-block">
+            <span>
+                <input class="url-field" type="url" id="url" name="urlToCrawl" placeholder="URL to crawl" onfocusin="clearError()"><br><br>
+                {{ with .Error }}
+                    <p style="color:red" class="error"> {{ . }}</p>
+                {{ end }}
+            </span>
+
+            <span>
+                <input class="submit-button" type="submit" value="Submit">
+            </span>
+        </div>
+
+        <div class="crawl-notifier">
+            <p> {{.CrawlNotification}} </p>
+        </div>
+
+        <div class="word-container">
+            {{range .Words}}
+                <div class="word-list">
+                    {{.}}
+                </div>
+            {{end}}
+        </div>
+    </form>
+
+    <script>
+        function clearError() {
+            document.getElementsByClassName('error')[0].style.visibility = 'hidden';
+        }
+    </script>
+
+</body>
+
+</html>

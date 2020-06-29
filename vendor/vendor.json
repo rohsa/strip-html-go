@@ -1,0 +1,13 @@
+{
+	"comment": "",
+	"ignore": "test",
+	"package": [
+		{
+			"checksumSHA1": "2eVMotz9tl6VkDmmFEqJSRpyXMI=",
+			"path": "github.com/grokify/html-strip-tags-go",
+			"revision": "ea0c1cf2f119c457934db5bbf04954734632343d",
+			"revisionTime": "2020-03-22T06:10:10Z"
+		}
+	],
+	"rootPath": "Practice/Exercise1"
+}
