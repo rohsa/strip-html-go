@@ -1,5 +1,5 @@
 # strip-html-go
-This is basic web UI (using html and javascript) with Golang/Go Programming 
+This is a basic web UI (using html and javascript) with Golang/Go Programming.
 # What it does
 This project:
 1. Shows a simple HTML UI with some javascript in it
