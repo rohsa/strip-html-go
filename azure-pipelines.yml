@@ -1,6 +1,11 @@
 # Go
 - task: SynopsysPolaris@1
   inputs:
+    polarisService: 'POLARIS_SIPSE_SERVER_URL'
+    polarisCommand: 'analyze -w'
+    waitForIssues: true
+- task: SynopsysPolaris@1
+  inputs:
     polarisCommand: 'analyze -w'
     waitForIssues: true
 # Build your Go project.
